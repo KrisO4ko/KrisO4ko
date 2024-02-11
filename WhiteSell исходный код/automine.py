@@ -17,23 +17,6 @@ bind = pg.prompt("бинд на продажу 3 слотов")
 fulah = pg.prompt("бинд на продажу 9 слотов и снятие с аук")
 pg.alert("WhiteSell", "WhiteSell", button="окончить настройку")
 SlotE = pg.prompt("ваш отзыв")
-
-def send_message_to_telegram(token, chat_id, message):
-    url = f"https://api.telegram.org/bot{token}/sendMessage"
-    params = {
-        'chat_id': chat_id,
-        'text': message
-    }
-    response = requests.get(url, params=params)
-    return response.json()
-
-# Ваш токен и chat_id
-token = "6431320118:AAGRtC5lGIO2k5TOM3dpR84lfiwBggs4XKY"
-chat_id = "1445110184"
-
-# Отправка сообщения в телеграм
-message = f"Отзыв: {SlotE}"
-response = send_message_to_telegram(token, chat_id, message)
 pg.alert("нажмите на кнопку ", "WhiteSell", button="нажми сюда")
 
 
